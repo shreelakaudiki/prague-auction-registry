@@ -976,6 +976,14 @@ function searchReference() {
     const message =
         document.getElementById("referenceMessage");
 
+    if (!input) {
+
+        message.textContent =
+            "Please enter an archive reference.";
+
+        return;
+    }
+
     if (input === "PAR-1988-073") {
 
         window.location.href =
@@ -983,8 +991,9 @@ function searchReference() {
 
     } else {
 
-        message.textContent =
-            "No public record was found for this reference.";
+        window.location.href =
+            "records.html?ref=" +
+            encodeURIComponent(input);
 
     }
 
