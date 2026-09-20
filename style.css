@@ -1,0 +1,595 @@
+/* =========================================
+   PRAGUE AUCTION REGISTRY
+   Historical Registry Aesthetic
+   ========================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: #111213;
+    color: #d8d2c5;
+    font-family: Georgia, "Times New Roman", serif;
+    line-height: 1.6;
+}
+
+
+/* =========================================
+   HEADER
+   ========================================= */
+
+.site-header {
+    background:
+        linear-gradient(
+            180deg,
+            #0b0c0d 0%,
+            #151617 100%
+        );
+
+    border-bottom: 1px solid #383735;
+}
+
+.header-strip {
+    max-width: 1180px;
+    margin: auto;
+    padding: 12px 28px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #aaa397;
+
+    border-bottom: 1px solid #292a29;
+}
+
+
+/* Czech-inspired accent line */
+
+.header-strip::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+
+/* =========================================
+   HEADER MAIN
+   ========================================= */
+
+.header-main {
+    max-width: 1180px;
+    margin: auto;
+    padding: 42px 28px 34px;
+
+    display: flex;
+    align-items: center;
+    gap: 22px;
+}
+
+.registry-mark {
+    flex-shrink: 0;
+}
+
+.mark-circle {
+    width: 68px;
+    height: 68px;
+
+    border: 1px solid #706b61;
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #b9b1a2;
+
+    font-family: Georgia, serif;
+    font-size: 15px;
+    letter-spacing: 2px;
+}
+
+.title-block h1 {
+    margin: 0;
+
+    font-size: 34px;
+    font-weight: normal;
+    letter-spacing: 1px;
+
+    color: #e4ded1;
+}
+
+.title-block p {
+    margin: 6px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #8f8a80;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.main-nav {
+    max-width: 1180px;
+    margin: auto;
+
+    padding: 0 28px 18px;
+
+    display: flex;
+    gap: 34px;
+}
+
+.main-nav a {
+    color: #918c82;
+    text-decoration: none;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.8px;
+
+    transition: color 0.2s ease;
+}
+
+.main-nav a:hover {
+    color: #b43d43;
+}
+
+
+/* =========================================
+   MAIN
+   ========================================= */
+
+main {
+    max-width: 1000px;
+    margin: auto;
+    padding: 70px 28px 90px;
+}
+
+
+/* =========================================
+   INTRO
+   ========================================= */
+
+.intro {
+    max-width: 760px;
+    margin-bottom: 65px;
+}
+
+.section-label {
+    margin-bottom: 13px;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+
+    color: #9b3a40;
+}
+
+.intro h2 {
+    margin: 0 0 18px;
+
+    font-size: 32px;
+    font-weight: normal;
+
+    color: #e1dbcf;
+}
+
+.intro p {
+    margin: 0;
+
+    max-width: 690px;
+
+    font-size: 15px;
+    color: #a9a398;
+}
+
+
+/* =========================================
+   INDEX SECTION
+   ========================================= */
+
+.index-section {
+    border-top: 1px solid #3a3936;
+}
+
+.section-heading {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+
+    padding: 15px 18px;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #77736b;
+
+    border-bottom: 1px solid #302f2d;
+}
+
+
+/* =========================================
+   OBJECT ENTRIES
+   ========================================= */
+
+.object-entry {
+    display: grid;
+    grid-template-columns: 1fr 240px;
+
+    padding: 21px 18px;
+
+    border-bottom: 1px solid #292927;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        padding-left 0.2s ease;
+}
+
+.object-entry:hover {
+    background: #181918;
+    padding-left: 24px;
+}
+
+.object-name {
+    font-size: 16px;
+    color: #d4cec1;
+}
+
+.object-meta {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+
+    color: #77746d;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =========================================
+   OBJECT PANEL
+   ========================================= */
+
+.object-panel {
+    display: none;
+
+    position: relative;
+
+    margin: 50px 0;
+
+    padding: 38px 42px;
+
+    background: #1b1c1c;
+
+    border: 1px solid #4a4741;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.object-panel.visible {
+    display: block;
+}
+
+.close-panel {
+    position: absolute;
+    top: 15px;
+    right: 18px;
+
+    border: none;
+    background: transparent;
+
+    color: #77736c;
+
+    font-size: 24px;
+
+    cursor: pointer;
+}
+
+.close-panel:hover {
+    color: #b43d43;
+}
+
+.object-panel h2 {
+    margin: 0 0 30px;
+
+    font-size: 27px;
+    font-weight: normal;
+
+    color: #e2dcd0;
+}
+
+.panel-details {
+    border-top: 1px solid #373632;
+}
+
+.panel-details p {
+    margin: 0;
+    padding: 13px 0;
+
+    display: flex;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #2d2d2a;
+}
+
+.panel-details span {
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #77736b;
+}
+
+.panel-details strong {
+    font-weight: normal;
+    color: #c9c2b5;
+}
+
+.panel-note {
+    margin: 28px 0 0;
+
+    font-size: 13px;
+    font-style: italic;
+
+    color: #858178;
+}
+
+
+/* =========================================
+   REFERENCE SEARCH
+   ========================================= */
+
+.reference-search {
+    margin-top: 85px;
+
+    padding: 42px;
+
+    background: #191a1a;
+
+    border: 1px solid #383733;
+}
+
+.reference-search h2 {
+    margin: 0 0 10px;
+
+    font-size: 25px;
+    font-weight: normal;
+
+    color: #ddd7ca;
+}
+
+.reference-search > p {
+    margin: 0 0 25px;
+
+    font-size: 14px;
+    color: #929087;
+}
+
+.search-box {
+    display: flex;
+    max-width: 620px;
+}
+
+.search-box input {
+    flex: 1;
+
+    padding: 15px 17px;
+
+    background: #0f1010;
+
+    border: 1px solid #45433f;
+    border-right: none;
+
+    color: #d8d1c4;
+
+    font-family: Georgia, serif;
+    font-size: 14px;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: #6b665d;
+}
+
+.search-box button {
+    padding: 0 25px;
+
+    background: #252624;
+
+    border: 1px solid #45433f;
+
+    color: #c5beb1;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.8px;
+
+    cursor: pointer;
+}
+
+.search-box button:hover {
+    background: #302f2c;
+    color: #e0d9cc;
+}
+
+.search-message {
+    min-height: 20px;
+
+    margin: 13px 0 0;
+
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    letter-spacing: 0.8px;
+
+    color: #a33a40;
+}
+
+
+/* =========================================
+   ARCHIVE NOTE
+   ========================================= */
+
+.archive-note {
+    margin-top: 70px;
+
+    padding: 28px 30px;
+
+    border-left: 2px solid #3e4142;
+
+    background: #161717;
+}
+
+.note-label {
+    margin-bottom: 8px;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+
+    color: #77746d;
+}
+
+.archive-note p {
+    margin: 0;
+
+    max-width: 720px;
+
+    font-size: 13px;
+    color: #87837b;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+
+footer {
+    padding: 28px;
+
+    border-top: 1px solid #302f2d;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-family: Arial, sans-serif;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+
+    color: #65625c;
+}
+
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 700px) {
+
+    .header-strip {
+        padding: 10px 18px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .header-main {
+        padding: 30px 18px 25px;
+    }
+
+    .mark-circle {
+        width: 55px;
+        height: 55px;
+        font-size: 12px;
+    }
+
+    .title-block h1 {
+        font-size: 25px;
+    }
+
+    .title-block p {
+        font-size: 9px;
+    }
+
+    .main-nav {
+        padding: 0 18px 16px;
+        gap: 18px;
+        flex-wrap: wrap;
+    }
+
+    main {
+        padding: 50px 18px 70px;
+    }
+
+    .intro h2 {
+        font-size: 27px;
+    }
+
+    .section-heading {
+        grid-template-columns: 1fr 130px;
+    }
+
+    .object-entry {
+        grid-template-columns: 1fr 130px;
+        padding: 18px 12px;
+    }
+
+    .object-name {
+        font-size: 14px;
+    }
+
+    .object-meta {
+        font-size: 8px;
+    }
+
+    .object-panel {
+        padding: 30px 22px;
+    }
+
+    .reference-search {
+        padding: 30px 22px;
+    }
+
+    .search-box {
+        flex-direction: column;
+    }
+
+    .search-box input {
+        border-right: 1px solid #45433f;
+    }
+
+    .search-box button {
+        padding: 14px;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
