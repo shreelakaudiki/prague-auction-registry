@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prague Auction Registry</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-strip">
+        <span>PRAGUE</span>
+        <span>EST. 1887</span>
+        <span>PRIVATE AUCTION RECORDS</span>
+    </div>
+
+    <div class="header-main">
+
+        <div class="registry-mark">
+            <div class="mark-circle">PAR</div>
+        </div>
+
+        <div class="title-block">
+            <h1>Prague Auction Registry</h1>
+            <p>Historical Auction &amp; Private Collection Records</p>
+        </div>
+
+    </div>
+
+    <nav class="main-nav">
+        <a href="index.html">ARCHIVE</a>
+        <a href="#">REGISTRY</a>
+        <a href="#">COLLECTIONS</a>
+        <a href="#">HISTORY</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="intro">
+
+        <div class="section-label">
+            HISTORICAL RECORDS
+        </div>
+
+        <h2>Prague Auction Registry</h2>
+
+        <p>
+            A reconstructed index of selected auction records,
+            private holdings, and withdrawn objects recorded in
+            Prague collections throughout the twentieth century.
+        </p>
+
+    </section>
+
+
+    <section class="search-section">
+
+        <div class="section-label">
+            SEARCH ARCHIVE
+        </div>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="yearInput"
+                placeholder="Enter year"
+                maxlength="4"
+            >
+
+            <button onclick="searchArchive()">
+                SEARCH
+            </button>
+
+        </div>
+
+        <p id="searchMessage" class="search-message"></p>
+
+    </section>
+
+
+    <section class="catalogue-section">
+
+        <div class="section-heading">
+            <span>ARCHIVE REGISTER</span>
+            <span>SELECTED YEARS</span>
+        </div>
+
+
+        <!-- 1979 -->
+
+        <div class="catalogue-entry">
+
+            <div class="catalogue-year">
+                1979
+            </div>
+
+            <div class="catalogue-info">
+
+                <h3>Spring Decorative Arts Auction</h3>
+
+                <p>
+                    European Decorative Objects
+                </p>
+
+                <span class="catalogue-ref">
+                    PAR–1979–04
+                </span>
+
+            </div>
+
+            <a href="#" class="view-link">
+                VIEW CATALOGUE →
+            </a>
+
+        </div>
+
+
+        <!-- 1984 -->
+
+        <div class="catalogue-entry">
+
+            <div class="catalogue-year">
+                1984
+            </div>
+
+            <div class="catalogue-info">
+
+                <h3>Private Estates Collection</h3>
+
+                <p>
+                    Jewellery &amp; Personal Objects
+                </p>
+
+                <span class="catalogue-ref">
+                    PAR–1984–09
+                </span>
+
+            </div>
+
+            <a href="#" class="view-link">
+                VIEW CATALOGUE →
+            </a>
+
+        </div>
+
+
+        <!-- 1988 -->
+
+        <div class="catalogue-entry">
+
+            <div class="catalogue-year">
+                1988
+            </div>
+
+            <div class="catalogue-info">
+
+                <h3>Autumn Auction · Prague</h3>
+
+                <p>
+                    Jewellery &amp; Private Holdings
+                </p>
+
+                <span class="catalogue-ref">
+                    PAR–1988–10
+                </span>
+
+            </div>
+
+            <a href="catalogue-1988.html" class="view-link">
+                VIEW CATALOGUE →
+            </a>
+
+        </div>
+
+
+        <!-- 1992 -->
+
+        <div class="catalogue-entry">
+
+            <div class="catalogue-year">
+                1992
+            </div>
+
+            <div class="catalogue-info">
+
+                <h3>Winter Antiquities Register</h3>
+
+                <p>
+                    Art, Furniture &amp; Antiquities
+                </p>
+
+                <span class="catalogue-ref">
+                    PAR–1992–02
+                </span>
+
+            </div>
+
+            <a href="#" class="view-link">
+                VIEW CATALOGUE →
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <section class="archive-note">
+
+        <div class="note-label">
+            ARCHIVAL NOTE
+        </div>
+
+        <p>
+            Records reproduced here represent selected entries
+            from private auction registers. Several catalogues
+            remain incomplete or unavailable for digitisation.
+        </p>
+
+    </section>
+
+</main>
+
+
+<footer>
+
+    <div>
+        PRAGUE AUCTION REGISTRY
+    </div>
+
+    <div>
+        HISTORICAL RECORDS · PRIVATE COLLECTIONS
+    </div>
+
+</footer>
+
+
+<script>
+
+function searchArchive() {
+
+    const year = document
+        .getElementById("yearInput")
+        .value
+        .trim();
+
+    const message = document.getElementById("searchMessage");
+
+    if (year === "1988") {
+
+        window.location.href = "catalogue-1988.html";
+
+    } else if (year === "") {
+
+        message.textContent = "Please enter a year.";
+
+    } else {
+
+        message.textContent =
+            "No catalogue is currently available for this year.";
+
+    }
+
+}
+
+</script>
+
+</body>
+</html>
