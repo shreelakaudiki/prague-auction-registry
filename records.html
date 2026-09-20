@@ -1,0 +1,1365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Archive Record · Prague Auction Registry</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        .record-page {
+            max-width: 850px;
+            margin: auto;
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-bottom: 45px;
+            color: #8d8981;
+            text-decoration: none;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+        }
+
+        .back-link:hover {
+            color: #b43d43;
+        }
+
+        .record-header {
+            padding-bottom: 30px;
+            border-bottom: 1px solid #3b3935;
+        }
+
+        .record-reference {
+            margin-bottom: 18px;
+            font-family: Arial, sans-serif;
+            font-size: 10px;
+            letter-spacing: 2px;
+            color: #8f8b82;
+        }
+
+        .record-title {
+            margin: 0;
+            font-size: 36px;
+            font-weight: normal;
+            color: #e2dcd0;
+        }
+
+        .record-subtitle {
+            margin-top: 8px;
+            font-size: 15px;
+            font-style: italic;
+            color: #858178;
+        }
+
+        .record-meta {
+            margin-top: 35px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid #353431;
+            border-bottom: 1px solid #353431;
+        }
+
+        .meta-item {
+            padding: 18px;
+            border-right: 1px solid #353431;
+        }
+
+        .meta-item:last-child {
+            border-right: none;
+        }
+
+        .meta-label {
+            display: block;
+            margin-bottom: 6px;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #706d66;
+        }
+
+        .meta-value {
+            font-size: 14px;
+            color: #c7c0b3;
+        }
+
+        .record-section {
+            padding: 35px 0;
+            border-bottom: 1px solid #302f2c;
+        }
+
+        .record-section h3 {
+            margin: 0 0 15px;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: normal;
+            color: #9b3a40;
+        }
+
+        .record-section p {
+            margin: 0;
+            max-width: 720px;
+            font-size: 15px;
+            color: #aaa49a;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 8px 13px;
+            border: 1px solid #55514a;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #bdb6aa;
+        }
+
+        .archival-note {
+            margin-top: 20px;
+            padding: 24px 27px;
+            background: #181919;
+            border-left: 2px solid #55514a;
+        }
+
+        .archival-note p {
+            font-size: 14px;
+            font-style: italic;
+            color: #9d988e;
+        }
+
+        .not-found {
+            display: none;
+            max-width: 700px;
+            margin: 60px auto;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid #3d3b37;
+            background: #181919;
+        }
+
+        .not-found h2 {
+            margin-top: 0;
+            font-weight: normal;
+            color: #ddd7ca;
+        }
+
+        .not-found p {
+            color: #858178;
+        }
+
+        .record-footer {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+            font-family: Arial, sans-serif;
+            font-size: 9px;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #65615a;
+        }
+
+        @media (max-width: 700px) {
+
+            .record-title {
+                font-size: 28px;
+            }
+
+            .record-meta {
+                grid-template-columns: 1fr;
+            }
+
+            .meta-item {
+                border-right: none;
+                border-bottom: 1px solid #353431;
+            }
+
+            .meta-item:last-child {
+                border-bottom: none;
+            }
+
+            .record-footer {
+                flex-direction: column;
+                gap: 8px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+<header class="site-header">
+
+    <div class="header-strip">
+        <span>PRAGUE</span>
+        <span>EST. 1887</span>
+        <span>PRIVATE AUCTION RECORDS</span>
+    </div>
+
+    <div class="header-main">
+
+        <div class="registry-mark">
+            <div class="mark-circle">PAR</div>
+        </div>
+
+        <div class="title-block">
+            <h1>Prague Auction Registry</h1>
+            <p>Historical Auction &amp; Private Collection Records</p>
+        </div>
+
+    </div>
+
+    <nav class="main-nav">
+        <a href="index.html">ARCHIVE</a>
+        <a href="#">REGISTRY</a>
+        <a href="#">COLLECTIONS</a>
+        <a href="#">HISTORY</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <div id="recordPage" class="record-page">
+
+        <a href="index.html" class="back-link">
+            ← RETURN TO OBJECT INDEX
+        </a>
+
+        <section class="record-header">
+
+            <div id="reference" class="record-reference"></div>
+
+            <h2 id="recordTitle" class="record-title"></h2>
+
+            <p id="recordSubtitle" class="record-subtitle"></p>
+
+        </section>
+
+
+        <section class="record-meta">
+
+            <div class="meta-item">
+
+                <span class="meta-label">
+                    Year
+                </span>
+
+                <span id="recordYear" class="meta-value"></span>
+
+            </div>
+
+
+            <div class="meta-item">
+
+                <span class="meta-label">
+                    Location
+                </span>
+
+                <span class="meta-value">
+                    Prague
+                </span>
+
+            </div>
+
+
+            <div class="meta-item">
+
+                <span class="meta-label">
+                    Folio
+                </span>
+
+                <span id="recordFolio" class="meta-value"></span>
+
+            </div>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <h3>
+                Description
+            </h3>
+
+            <p id="description"></p>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <h3>
+                Provenance
+            </h3>
+
+            <p id="provenance"></p>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <h3>
+                Auction Record
+            </h3>
+
+            <p id="auction"></p>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <h3>
+                Status
+            </h3>
+
+            <span id="status" class="status"></span>
+
+        </section>
+
+
+        <section class="record-section">
+
+            <h3>
+                Archival Note
+            </h3>
+
+            <div class="archival-note">
+
+                <p id="note"></p>
+
+            </div>
+
+        </section>
+
+
+        <div class="record-footer">
+
+            <span>
+                Prague Auction Registry
+            </span>
+
+            <span id="footerReference"></span>
+
+        </div>
+
+    </div>
+
+
+    <div id="notFound" class="not-found">
+
+        <h2>Record Not Found</h2>
+
+        <p>
+            No public record was found for the supplied
+            archival reference.
+        </p>
+
+        <p id="badReference"></p>
+
+    </div>
+
+</main>
+
+
+<footer>
+
+    <div>
+        PRAGUE AUCTION REGISTRY
+    </div>
+
+    <div>
+        HISTORICAL AUCTION RECORDS · PRIVATE COLLECTIONS
+    </div>
+
+</footer>
+
+
+<script>
+
+const records = {
+
+    "PAR-1976-014": {
+        name: "Bohemian Glass Decanter",
+        category: "Decorative Arts",
+        year: "1976",
+        folio: "014",
+
+        description:
+            "Clear Bohemian glass decanter with geometric cut decoration. Entered from a private household collection in northern Prague.",
+
+        provenance:
+            "The object was submitted as part of a private household collection. Previous ownership records were not preserved with the surviving entry.",
+
+        auction:
+            "The decanter was entered into the spring decorative arts register. No subsequent alteration to the catalogue entry was recorded.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No additional correspondence was attached to the surviving registry entry."
+    },
+
+
+    "PAR-1977-021": {
+        name: "Walnut Writing Desk",
+        category: "Furniture",
+        year: "1977",
+        folio: "021",
+
+        description:
+            "Compact walnut writing desk with two drawers and brass fittings. Surface shows minor wear consistent with regular domestic use.",
+
+        provenance:
+            "Submitted as part of a private residential collection. Earlier ownership documentation was not retained.",
+
+        auction:
+            "Entered into the winter private holdings register. No subsequent sale notation appears in the surviving record.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The original catalogue photograph was not preserved."
+    },
+
+
+    "PAR-1978-033": {
+        name: "Silver Candlestick Pair",
+        category: "Silverware",
+        year: "1978",
+        folio: "033",
+
+        description:
+            "Matching silver candlesticks with weighted circular bases. Maker's mark is partially worn and could not be confirmed.",
+
+        provenance:
+            "Submitted from a domestic collection with incomplete ownership documentation.",
+
+        auction:
+            "Entered into the spring household collection register. No later amendment was recorded.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Condition report remains attached to the original registry entry."
+    },
+
+
+    "PAR-1979-041": {
+        name: "Porcelain Tea Service",
+        category: "Ceramics",
+        year: "1979",
+        folio: "041",
+
+        description:
+            "Six-piece porcelain tea service decorated with blue floral motifs. Presented alongside several domestic objects from the same estate.",
+
+        provenance:
+            "Transferred from a private estate collection. The original household location was not recorded.",
+
+        auction:
+            "Entered into the spring decorative arts auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No additional correspondence was attached to the surviving entry."
+    },
+
+
+    "PAR-1979-047": {
+        name: "Bronze Mantel Clock",
+        category: "Horology",
+        year: "1979",
+        folio: "047",
+
+        description:
+            "Small bronze mantel clock with an enamelled clock face. Mechanism was recorded as functional during inspection.",
+
+        provenance:
+            "Submitted by a private collector with no complete ownership history.",
+
+        auction:
+            "Registered among European decorative objects during the spring auction season.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The mechanism was not subsequently examined."
+    },
+
+
+    "PAR-1980-052": {
+        name: "Art Nouveau Vase",
+        category: "Decorative Arts",
+        year: "1980",
+        folio: "052",
+
+        description:
+            "Tall decorative vase with flowing floral ornamentation. Surface carries minor age-related patina.",
+
+        provenance:
+            "Private collection. Previous owner was not identified in the surviving register.",
+
+        auction:
+            "Entered into the annual decorative arts register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No maker attribution was recorded."
+    },
+
+
+    "PAR-1981-061": {
+        name: "Miniature Landscape Painting",
+        category: "Fine Art",
+        year: "1981",
+        folio: "061",
+
+        description:
+            "Small framed landscape depicting a wooded hillside and distant village. Artist attribution was not established in the surviving paperwork.",
+
+        provenance:
+            "Acquired from a private European collection. Earlier provenance documentation was incomplete.",
+
+        auction:
+            "Entered into the private art holdings register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The artist attribution remains unresolved."
+    },
+
+
+    "PAR-1982-074": {
+        name: "Enamelled Cigarette Case",
+        category: "Personal Objects",
+        year: "1982",
+        folio: "074",
+
+        description:
+            "Rectangular silver case with dark enamel decoration. Interior bears initials belonging to an unidentified former owner.",
+
+        provenance:
+            "Submitted with a group of personal effects from a private estate.",
+
+        auction:
+            "Entered into the autumn private collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The initials were not matched to any registry entry."
+    },
+
+
+    "PAR-1983-081": {
+        name: "Carved Oak Mirror",
+        category: "Furniture",
+        year: "1983",
+        folio: "081",
+
+        description:
+            "Carved oak wall mirror with a restrained floral border. Registered as part of a private domestic collection.",
+
+        provenance:
+            "Estate documentation identifies the object as a household furnishing.",
+
+        auction:
+            "Entered into the estate decorative collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No restoration history was supplied."
+    },
+
+
+    "PAR-1984-052": {
+        name: "Gold Pendant",
+        category: "Jewellery",
+        year: "1984",
+        folio: "052",
+
+        description:
+            "Small gold pendant with a simple oval setting. Weight and metal purity were recorded during registration.",
+
+        provenance:
+            "Submitted from a private jewellery collection. Earlier ownership was not established.",
+
+        auction:
+            "Entered into the private estates collection.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No maker's mark was recorded."
+    },
+
+
+    "PAR-1984-055": {
+        name: "Sapphire Dress Ring",
+        category: "Jewellery",
+        year: "1984",
+        folio: "055",
+
+        description:
+            "Blue sapphire mounted in a narrow gold setting. Accompanying paperwork contains no confirmed maker's name.",
+
+        provenance:
+            "Submitted with jewellery from a privately held estate.",
+
+        auction:
+            "Entered into the private estates collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The accompanying paperwork was retained with the original entry."
+    },
+
+
+    "PAR-1984-066": {
+        name: "Silver Presentation Case",
+        category: "Personal Objects",
+        year: "1984",
+        folio: "066",
+
+        description:
+            "Rectangular silver case with a hinged lid and engraved initials. Original recipient of the object remains unidentified.",
+
+        provenance:
+            "Transferred from a private estate collection.",
+
+        auction:
+            "Entered into the private estates register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Engraved initials remain unidentified."
+    },
+
+
+    "PAR-1985-072": {
+        name: "Bohemian Crystal Bowl",
+        category: "Decorative Arts",
+        year: "1985",
+        folio: "072",
+
+        description:
+            "Wide crystal bowl with cut geometric decoration around the rim. Registered without a confirmed designer attribution.",
+
+        provenance:
+            "Submitted from a private decorative arts collection.",
+
+        auction:
+            "Entered into the spring decorative collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No catalogue photograph survives."
+    },
+
+
+    "PAR-1985-078": {
+        name: "Ivory Miniature Frame",
+        category: "Decorative Arts",
+        year: "1985",
+        folio: "078",
+
+        description:
+            "Small carved frame intended to hold a miniature portrait. The original portrait was not present when the object was registered.",
+
+        provenance:
+            "Private decorative collection with incomplete documentation.",
+
+        auction:
+            "Entered into the spring decorative collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The frame was registered without its original contents."
+    },
+
+
+    "PAR-1986-084": {
+        name: "Travelling Writing Set",
+        category: "Personal Objects",
+        year: "1986",
+        folio: "084",
+
+        description:
+            "Compact writing set containing an ink container and folding accessories. Leather case shows moderate signs of age.",
+
+        provenance:
+            "Submitted from a private travelling collection.",
+
+        auction:
+            "Entered into the private travelling collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No correspondence accompanied the entry."
+    },
+
+
+    "PAR-1986-091": {
+        name: "Bronze Horse Figure",
+        category: "Sculpture",
+        year: "1986",
+        folio: "091",
+
+        description:
+            "Small cast-bronze figure depicting a standing horse. Sculpture was registered without an identified artist.",
+
+        provenance:
+            "Private sculpture collection. Previous ownership history remains incomplete.",
+
+        auction:
+            "Entered into the European sculpture register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Artist attribution was left blank in the original entry."
+    },
+
+
+    "PAR-1987-097": {
+        name: "Garnet Brooch",
+        category: "Jewellery",
+        year: "1987",
+        folio: "097",
+
+        description:
+            "Decorative brooch set with several small garnets. Fastening mechanism was noted as intact at the time of inspection.",
+
+        provenance:
+            "Submitted as part of a private jewellery collection.",
+
+        auction:
+            "Entered into the autumn jewellery collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No previous catalogue reference was located."
+    },
+
+
+    "PAR-1987-103": {
+        name: "Mahogany Jewellery Box",
+        category: "Furniture",
+        year: "1987",
+        folio: "103",
+
+        description:
+            "Mahogany box with a fitted interior and brass key escutcheon. No jewellery was recorded as accompanying the box.",
+
+        provenance:
+            "Submitted from a private household estate.",
+
+        auction:
+            "Entered into the autumn private holdings register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The original key was retained with the object."
+    },
+
+
+    "PAR-1988-068": {
+        name: "Silver Cigarette Case",
+        category: "Personal Objects",
+        year: "1988",
+        folio: "068",
+
+        description:
+            "Silver cigarette case with a lightly engraved exterior. Registered among personal effects from a private collection.",
+
+        provenance:
+            "Submitted as part of a private collection of personal objects.",
+
+        auction:
+            "Entered into the autumn auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No additional provenance material was attached."
+    },
+
+
+    "PAR-1988-070": {
+        name: "Garnet Pendant",
+        category: "Jewellery",
+        year: "1988",
+        folio: "070",
+
+        description:
+            "Pendant featuring a deep red garnet in a simple metal setting. Previous ownership could not be established from the register.",
+
+        provenance:
+            "Private jewellery collection with incomplete ownership records.",
+
+        auction:
+            "Entered into the autumn auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No maker attribution was recorded."
+    },
+
+
+    "PAR-1988-071": {
+        name: "Bohemian Glass Bowl",
+        category: "Decorative Arts",
+        year: "1988",
+        folio: "071",
+
+        description:
+            "Shallow glass bowl with a faceted decorative rim. Object was entered without an attributed maker.",
+
+        provenance:
+            "Submitted from a private decorative arts collection.",
+
+        auction:
+            "Entered into the autumn auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The object was recorded without a catalogue illustration."
+    },
+
+
+    "PAR-1988-072": {
+        name: "Gold Dress Pin",
+        category: "Jewellery",
+        year: "1988",
+        folio: "072",
+
+        description:
+            "Small gold dress pin with a plain circular head. Condition was described as good with minor surface wear.",
+
+        provenance:
+            "Submitted with personal jewellery from a private estate.",
+
+        auction:
+            "Entered into the autumn auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No inscription was found during registration."
+    },
+
+
+    "PAR-1988-074": {
+        name: "Silver Pocket Watch",
+        category: "Horology",
+        year: "1988",
+        folio: "074",
+
+        description:
+            "Silver pocket watch with a white dial and engraved case back. Movement was not examined during the initial registration.",
+
+        provenance:
+            "Submitted from a private collection of personal effects.",
+
+        auction:
+            "Entered into the autumn auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Mechanical condition was not assessed."
+    },
+
+
+    "PAR-1988-076": {
+        name: "Enamelled Brooch",
+        category: "Jewellery",
+        year: "1988",
+        folio: "076",
+
+        description:
+            "Small enamelled brooch featuring a muted floral design. The original fastening remains attached.",
+
+        provenance:
+            "Private jewellery collection. Previous ownership documentation was incomplete.",
+
+        auction:
+            "Entered into the autumn auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No maker's mark was identified."
+    },
+
+
+    "PAR-1988-078": {
+        name: "Carved Ivory Box",
+        category: "Decorative Arts",
+        year: "1988",
+        folio: "078",
+
+        description:
+            "Small carved box decorated with geometric border patterns. Provenance documentation accompanying the object was incomplete.",
+
+        provenance:
+            "Submitted from a private decorative collection.",
+
+        auction:
+            "Entered into the autumn auction register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The original contents of the box were not recorded."
+    },
+
+
+    "PAR-1989-084": {
+        name: "Art Deco Desk Clock",
+        category: "Horology",
+        year: "1989",
+        folio: "084",
+
+        description:
+            "Rectangular desk clock with a stepped decorative case. Dial carries minor discoloration consistent with age.",
+
+        provenance:
+            "Private collection of European decorative objects.",
+
+        auction:
+            "Entered into the spring private collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "The clock was not serviced during registration."
+    },
+
+
+    "PAR-1989-091": {
+        name: "Silver Vanity Mirror",
+        category: "Personal Objects",
+        year: "1989",
+        folio: "091",
+
+        description:
+            "Hand mirror with a silver frame and plain rear surface. Registered among personal accessories from a private estate.",
+
+        provenance:
+            "Submitted from a private estate collection.",
+
+        auction:
+            "Entered into the spring private collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No inscription was found on the frame."
+    },
+
+
+    "PAR-1990-097": {
+        name: "Czech Landscape Painting",
+        category: "Fine Art",
+        year: "1990",
+        folio: "097",
+
+        description:
+            "Framed landscape depicting a rural scene beneath an overcast sky. Artist attribution remains uncertain.",
+
+        provenance:
+            "Submitted from a private European art collection.",
+
+        auction:
+            "Entered into the European art register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Attribution remains unresolved."
+    },
+
+
+    "PAR-1990-104": {
+        name: "Oak Writing Cabinet",
+        category: "Furniture",
+        year: "1990",
+        folio: "104",
+
+        description:
+            "Tall oak cabinet with fitted writing compartments. Several internal fittings show signs of previous repair.",
+
+        provenance:
+            "Private household collection.",
+
+        auction:
+            "Entered into the European estates collection.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Repair history was not documented."
+    },
+
+
+    "PAR-1991-112": {
+        name: "Porcelain Figurine",
+        category: "Ceramics",
+        year: "1991",
+        folio: "112",
+
+        description:
+            "Small porcelain figure depicting a standing female subject. Manufacturer's mark is partially obscured beneath the base.",
+
+        provenance:
+            "Submitted from a private ceramics collection.",
+
+        auction:
+            "Entered into the winter antiquities register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Manufacturer could not be conclusively identified."
+    },
+
+
+    "PAR-1991-118": {
+        name: "Silver Serving Tray",
+        category: "Silverware",
+        year: "1991",
+        folio: "118",
+
+        description:
+            "Oval silver tray with a raised border and simple handles. Surface displays light scratching from previous domestic use.",
+
+        provenance:
+            "Private household collection.",
+
+        auction:
+            "Entered into the winter antiquities register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No inscription identifying the original owner was found."
+    },
+
+
+    "PAR-1992-081": {
+        name: "Mahogany Cabinet",
+        category: "Furniture",
+        year: "1992",
+        folio: "081",
+
+        description:
+            "Medium-sized mahogany cabinet with two lower compartments. Original key was included with the object at registration.",
+
+        provenance:
+            "Submitted from a private estate collection.",
+
+        auction:
+            "Entered into the winter antiquities register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No restoration documents were supplied."
+    },
+
+
+    "PAR-1992-087": {
+        name: "Bronze Horse Figure",
+        category: "Sculpture",
+        year: "1992",
+        folio: "087",
+
+        description:
+            "Cast-bronze horse figure mounted on a rectangular base. Surface patina was left untreated during cataloguing.",
+
+        provenance:
+            "Private sculpture collection.",
+
+        auction:
+            "Entered into the winter antiquities register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No artist attribution was established."
+    },
+
+
+    "PAR-1992-090": {
+        name: "Czech Landscape Study",
+        category: "Fine Art",
+        year: "1992",
+        folio: "090",
+
+        description:
+            "Small landscape study showing a rural road and distant hills. The artist's signature could not be conclusively identified.",
+
+        provenance:
+            "Submitted from a private art collection.",
+
+        auction:
+            "Entered into the winter antiquities register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Signature remains unresolved."
+    },
+
+
+    "PAR-1992-093": {
+        name: "Porcelain Floral Vase",
+        category: "Ceramics",
+        year: "1992",
+        folio: "093",
+
+        description:
+            "Narrow porcelain vase decorated with hand-painted flowers. Minor wear was noted around the lower rim.",
+
+        provenance:
+            "Private ceramics collection.",
+
+        auction:
+            "Entered into the winter antiquities register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No manufacturer attribution was recorded."
+    },
+
+
+    "PAR-1992-096": {
+        name: "Silver Presentation Tray",
+        category: "Silverware",
+        year: "1992",
+        folio: "096",
+
+        description:
+            "Rectangular silver tray with engraved decorative edging. No inscription identifying the original recipient was found.",
+
+        provenance:
+            "Submitted from a private household estate.",
+
+        auction:
+            "Entered into the winter antiquities register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No further correspondence accompanied the entry."
+    },
+
+
+    "PAR-1993-104": {
+        name: "Art Nouveau Desk Lamp",
+        category: "Decorative Arts",
+        year: "1993",
+        folio: "104",
+
+        description:
+            "Decorative desk lamp with a curved metal stem and glass shade. Electrical fittings were not tested during registration.",
+
+        provenance:
+            "Submitted from a private decorative arts collection.",
+
+        auction:
+            "Entered into the spring decorative collection register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "Electrical condition was not assessed."
+    },
+
+
+    "PAR-1994-117": {
+        name: "Gold Locket",
+        category: "Jewellery",
+        year: "1994",
+        folio: "117",
+
+        description:
+            "Small gold locket with a hinged front and plain exterior. Interior compartments were empty when the object was catalogued.",
+
+        provenance:
+            "Submitted from a private jewellery collection.",
+
+        auction:
+            "Entered into the private jewellery register.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No miniature or photograph was found inside."
+    },
+
+
+    "PAR-1995-124": {
+        name: "Carved Walnut Writing Box",
+        category: "Furniture",
+        year: "1995",
+        folio: "124",
+
+        description:
+            "Portable walnut writing box with several fitted compartments. Exterior carries minor scratches consistent with regular handling.",
+
+        provenance:
+            "Submitted from a private household collection.",
+
+        auction:
+            "Entered into the private estates collection.",
+
+        status:
+            "REGISTERED",
+
+        note:
+            "No additional provenance documentation accompanied the object."
+    }
+
+};
+
+
+function loadRecord() {
+
+    const params = new URLSearchParams(window.location.search);
+
+    const reference = params
+        .get("ref")
+        ?.trim()
+        .toUpperCase();
+
+    const record = records[reference];
+
+
+    if (!record) {
+
+        document
+            .getElementById("recordPage")
+            .style.display = "none";
+
+        document
+            .getElementById("notFound")
+            .style.display = "block";
+
+        document
+            .getElementById("badReference")
+            .textContent =
+                reference
+                ? "Reference searched: " + reference
+                : "No reference was supplied.";
+
+        return;
+    }
+
+
+    document.getElementById("reference").textContent =
+        "ARCHIVE REFERENCE · " + reference;
+
+    document.getElementById("recordTitle").textContent =
+        record.name;
+
+    document.getElementById("recordSubtitle").textContent =
+        record.category + " · Private Holdings";
+
+    document.getElementById("recordYear").textContent =
+        record.year;
+
+    document.getElementById("recordFolio").textContent =
+        record.folio;
+
+    document.getElementById("description").textContent =
+        record.description;
+
+    document.getElementById("provenance").textContent =
+        record.provenance;
+
+    document.getElementById("auction").textContent =
+        record.auction;
+
+    document.getElementById("status").textContent =
+        record.status;
+
+    document.getElementById("note").textContent =
+        record.note;
+
+    document.getElementById("footerReference").textContent =
+        "PAR · " + record.year + " · " + record.folio;
+
+}
+
+
+loadRecord();
+
+</script>
+
+</body>
+</html>
