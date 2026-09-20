@@ -3,9 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Prague Auction Registry</title>
-
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -50,165 +48,523 @@
             HISTORICAL RECORDS
         </div>
 
-        <h2>Prague Auction Registry</h2>
+        <h2>Archival Object Index</h2>
 
         <p>
-            A reconstructed index of selected auction records,
-            private holdings, and withdrawn objects recorded in
-            Prague collections throughout the twentieth century.
+            Selected objects recorded in Prague auction registers
+            and private collections between 1976 and 1995.
+            Detailed records may be requested using the
+            corresponding archival reference.
         </p>
 
     </section>
 
 
-    <section class="search-section">
-
-        <div class="section-label">
-            SEARCH ARCHIVE
-        </div>
-
-        <div class="search-box">
-
-            <input
-                type="text"
-                id="yearInput"
-                placeholder="Enter year"
-                maxlength="4"
-            >
-
-            <button onclick="searchArchive()">
-                SEARCH
-            </button>
-
-        </div>
-
-        <p id="searchMessage" class="search-message"></p>
-
-    </section>
-
-
-    <section class="catalogue-section">
+    <section class="index-section">
 
         <div class="section-heading">
-            <span>ARCHIVE REGISTER</span>
-            <span>SELECTED YEARS</span>
+            <span>OBJECT</span>
+            <span>YEAR · CATEGORY</span>
+        </div>
+
+
+        <!-- 1976 -->
+
+        <div class="object-entry" onclick="showObject('1')">
+            <div class="object-name">
+                Bohemian Glass Decanter
+            </div>
+            <div class="object-meta">
+                1976 · Decorative Arts
+            </div>
+        </div>
+
+
+        <!-- 1977 -->
+
+        <div class="object-entry" onclick="showObject('2')">
+            <div class="object-name">
+                Walnut Writing Desk
+            </div>
+            <div class="object-meta">
+                1977 · Furniture
+            </div>
+        </div>
+
+
+        <!-- 1978 -->
+
+        <div class="object-entry" onclick="showObject('3')">
+            <div class="object-name">
+                Silver Candlestick Pair
+            </div>
+            <div class="object-meta">
+                1978 · Silverware
+            </div>
         </div>
 
 
         <!-- 1979 -->
 
-        <div class="catalogue-entry">
-
-            <div class="catalogue-year">
-                1979
+        <div class="object-entry" onclick="showObject('4')">
+            <div class="object-name">
+                Porcelain Tea Service
             </div>
-
-            <div class="catalogue-info">
-
-                <h3>Spring Decorative Arts Auction</h3>
-
-                <p>
-                    European Decorative Objects
-                </p>
-
-                <span class="catalogue-ref">
-                    PAR–1979–04
-                </span>
-
+            <div class="object-meta">
+                1979 · Ceramics
             </div>
+        </div>
 
-            <a href="#" class="view-link">
-                VIEW CATALOGUE →
-            </a>
+        <div class="object-entry" onclick="showObject('5')">
+            <div class="object-name">
+                Bronze Mantel Clock
+            </div>
+            <div class="object-meta">
+                1979 · Horology
+            </div>
+        </div>
 
+
+        <!-- 1980 -->
+
+        <div class="object-entry" onclick="showObject('6')">
+            <div class="object-name">
+                Art Nouveau Vase
+            </div>
+            <div class="object-meta">
+                1980 · Decorative Arts
+            </div>
+        </div>
+
+
+        <!-- 1981 -->
+
+        <div class="object-entry" onclick="showObject('7')">
+            <div class="object-name">
+                Miniature Landscape Painting
+            </div>
+            <div class="object-meta">
+                1981 · Fine Art
+            </div>
+        </div>
+
+
+        <!-- 1982 -->
+
+        <div class="object-entry" onclick="showObject('8')">
+            <div class="object-name">
+                Enamelled Cigarette Case
+            </div>
+            <div class="object-meta">
+                1982 · Personal Objects
+            </div>
+        </div>
+
+
+        <!-- 1983 -->
+
+        <div class="object-entry" onclick="showObject('9')">
+            <div class="object-name">
+                Carved Oak Mirror
+            </div>
+            <div class="object-meta">
+                1983 · Furniture
+            </div>
         </div>
 
 
         <!-- 1984 -->
 
-        <div class="catalogue-entry">
-
-            <div class="catalogue-year">
-                1984
+        <div class="object-entry" onclick="showObject('10')">
+            <div class="object-name">
+                Gold Pendant
             </div>
-
-            <div class="catalogue-info">
-
-                <h3>Private Estates Collection</h3>
-
-                <p>
-                    Jewellery &amp; Personal Objects
-                </p>
-
-                <span class="catalogue-ref">
-                    PAR–1984–09
-                </span>
-
+            <div class="object-meta">
+                1984 · Jewellery
             </div>
+        </div>
 
-            <a href="#" class="view-link">
-                VIEW CATALOGUE →
-            </a>
+        <div class="object-entry" onclick="showObject('11')">
+            <div class="object-name">
+                Sapphire Dress Ring
+            </div>
+            <div class="object-meta">
+                1984 · Jewellery
+            </div>
+        </div>
 
+        <div class="object-entry" onclick="showObject('12')">
+            <div class="object-name">
+                Silver Presentation Case
+            </div>
+            <div class="object-meta">
+                1984 · Personal Objects
+            </div>
+        </div>
+
+
+        <!-- 1985 -->
+
+        <div class="object-entry" onclick="showObject('13')">
+            <div class="object-name">
+                Bohemian Crystal Bowl
+            </div>
+            <div class="object-meta">
+                1985 · Decorative Arts
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('14')">
+            <div class="object-name">
+                Ivory Miniature Frame
+            </div>
+            <div class="object-meta">
+                1985 · Decorative Arts
+            </div>
+        </div>
+
+
+        <!-- 1986 -->
+
+        <div class="object-entry" onclick="showObject('15')">
+            <div class="object-name">
+                Travelling Writing Set
+            </div>
+            <div class="object-meta">
+                1986 · Personal Objects
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('16')">
+            <div class="object-name">
+                Bronze Horse Figure
+            </div>
+            <div class="object-meta">
+                1986 · Sculpture
+            </div>
+        </div>
+
+
+        <!-- 1987 -->
+
+        <div class="object-entry" onclick="showObject('17')">
+            <div class="object-name">
+                Garnet Brooch
+            </div>
+            <div class="object-meta">
+                1987 · Jewellery
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('18')">
+            <div class="object-name">
+                Mahogany Jewellery Box
+            </div>
+            <div class="object-meta">
+                1987 · Furniture
+            </div>
         </div>
 
 
         <!-- 1988 -->
 
-        <div class="catalogue-entry">
-
-            <div class="catalogue-year">
-                1988
+        <div class="object-entry" onclick="showObject('19')">
+            <div class="object-name">
+                Silver Cigarette Case
             </div>
-
-            <div class="catalogue-info">
-
-                <h3>Autumn Auction · Prague</h3>
-
-                <p>
-                    Jewellery &amp; Private Holdings
-                </p>
-
-                <span class="catalogue-ref">
-                    PAR–1988–10
-                </span>
-
+            <div class="object-meta">
+                1988 · Personal Objects
             </div>
+        </div>
 
-            <a href="catalogue-1988.html" class="view-link">
-                VIEW CATALOGUE →
-            </a>
+        <div class="object-entry" onclick="showObject('20')">
+            <div class="object-name">
+                Garnet Pendant
+            </div>
+            <div class="object-meta">
+                1988 · Jewellery
+            </div>
+        </div>
 
+        <div class="object-entry" onclick="showObject('21')">
+            <div class="object-name">
+                Bohemian Glass Bowl
+            </div>
+            <div class="object-meta">
+                1988 · Decorative Arts
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('22')">
+            <div class="object-name">
+                Gold Dress Pin
+            </div>
+            <div class="object-meta">
+                1988 · Jewellery
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('23')">
+            <div class="object-name">
+                Unidentified Crystal Jewel
+            </div>
+            <div class="object-meta">
+                1988 · Jewellery
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('24')">
+            <div class="object-name">
+                Silver Pocket Watch
+            </div>
+            <div class="object-meta">
+                1988 · Horology
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('25')">
+            <div class="object-name">
+                Enamelled Brooch
+            </div>
+            <div class="object-meta">
+                1988 · Jewellery
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('26')">
+            <div class="object-name">
+                Carved Ivory Box
+            </div>
+            <div class="object-meta">
+                1988 · Decorative Arts
+            </div>
+        </div>
+
+
+        <!-- 1989 -->
+
+        <div class="object-entry" onclick="showObject('27')">
+            <div class="object-name">
+                Art Deco Desk Clock
+            </div>
+            <div class="object-meta">
+                1989 · Horology
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('28')">
+            <div class="object-name">
+                Silver Vanity Mirror
+            </div>
+            <div class="object-meta">
+                1989 · Personal Objects
+            </div>
+        </div>
+
+
+        <!-- 1990 -->
+
+        <div class="object-entry" onclick="showObject('29')">
+            <div class="object-name">
+                Czech Landscape Painting
+            </div>
+            <div class="object-meta">
+                1990 · Fine Art
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('30')">
+            <div class="object-name">
+                Oak Writing Cabinet
+            </div>
+            <div class="object-meta">
+                1990 · Furniture
+            </div>
+        </div>
+
+
+        <!-- 1991 -->
+
+        <div class="object-entry" onclick="showObject('31')">
+            <div class="object-name">
+                Porcelain Figurine
+            </div>
+            <div class="object-meta">
+                1991 · Ceramics
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('32')">
+            <div class="object-name">
+                Silver Serving Tray
+            </div>
+            <div class="object-meta">
+                1991 · Silverware
+            </div>
         </div>
 
 
         <!-- 1992 -->
 
-        <div class="catalogue-entry">
-
-            <div class="catalogue-year">
-                1992
+        <div class="object-entry" onclick="showObject('33')">
+            <div class="object-name">
+                Mahogany Cabinet
             </div>
-
-            <div class="catalogue-info">
-
-                <h3>Winter Antiquities Register</h3>
-
-                <p>
-                    Art, Furniture &amp; Antiquities
-                </p>
-
-                <span class="catalogue-ref">
-                    PAR–1992–02
-                </span>
-
+            <div class="object-meta">
+                1992 · Furniture
             </div>
+        </div>
 
-            <a href="#" class="view-link">
-                VIEW CATALOGUE →
-            </a>
+        <div class="object-entry" onclick="showObject('34')">
+            <div class="object-name">
+                Bronze Horse Figure
+            </div>
+            <div class="object-meta">
+                1992 · Sculpture
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('35')">
+            <div class="object-name">
+                Czech Landscape Study
+            </div>
+            <div class="object-meta">
+                1992 · Fine Art
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('36')">
+            <div class="object-name">
+                Porcelain Floral Vase
+            </div>
+            <div class="object-meta">
+                1992 · Ceramics
+            </div>
+        </div>
+
+        <div class="object-entry" onclick="showObject('37')">
+            <div class="object-name">
+                Silver Presentation Tray
+            </div>
+            <div class="object-meta">
+                1992 · Silverware
+            </div>
+        </div>
+
+
+        <!-- 1993 -->
+
+        <div class="object-entry" onclick="showObject('38')">
+            <div class="object-name">
+                Art Nouveau Desk Lamp
+            </div>
+            <div class="object-meta">
+                1993 · Decorative Arts
+            </div>
+        </div>
+
+
+        <!-- 1994 -->
+
+        <div class="object-entry" onclick="showObject('39')">
+            <div class="object-name">
+                Gold Locket
+            </div>
+            <div class="object-meta">
+                1994 · Jewellery
+            </div>
+        </div>
+
+
+        <!-- 1995 -->
+
+        <div class="object-entry" onclick="showObject('40')">
+            <div class="object-name">
+                Carved Walnut Writing Box
+            </div>
+            <div class="object-meta">
+                1995 · Furniture
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- OBJECT DETAIL PANEL -->
+
+    <section id="objectPanel" class="object-panel">
+
+        <button class="close-panel" onclick="closeObject()">
+            ×
+        </button>
+
+        <div class="section-label">
+            OBJECT INDEX ENTRY
+        </div>
+
+        <h2 id="panelName"></h2>
+
+        <div class="panel-details">
+
+            <p>
+                <span>YEAR</span>
+                <strong id="panelYear"></strong>
+            </p>
+
+            <p>
+                <span>CATEGORY</span>
+                <strong id="panelCategory"></strong>
+            </p>
+
+            <p>
+                <span>AUCTION</span>
+                <strong id="panelAuction"></strong>
+            </p>
+
+            <p>
+                <span>FOLIO</span>
+                <strong id="panelFolio"></strong>
+            </p>
 
         </div>
+
+        <p class="panel-note">
+            Full archival record available by reference search only.
+        </p>
+
+    </section>
+
+
+    <!-- SEARCH -->
+
+    <section class="reference-search">
+
+        <div class="section-label">
+            ARCHIVE REFERENCE SEARCH
+        </div>
+
+        <h2>Request a Record</h2>
+
+        <p>
+            Enter the complete archival reference assigned to
+            the object in the registry.
+        </p>
+
+        <div class="search-box">
+
+            <input
+                type="text"
+                id="referenceInput"
+                placeholder="Enter archive reference"
+            >
+
+            <button onclick="searchReference()">
+                SEARCH
+            </button>
+
+        </div>
+
+        <p id="referenceMessage" class="search-message"></p>
 
     </section>
 
@@ -216,13 +572,14 @@
     <section class="archive-note">
 
         <div class="note-label">
-            ARCHIVAL NOTE
+            REGISTRY NOTE
         </div>
 
         <p>
-            Records reproduced here represent selected entries
-            from private auction registers. Several catalogues
-            remain incomplete or unavailable for digitisation.
+            The object index represents selected entries from
+            historical auction registers. Complete records are
+            not displayed in the public index and may be requested
+            using their assigned archival reference.
         </p>
 
     </section>
@@ -237,7 +594,7 @@
     </div>
 
     <div>
-        HISTORICAL RECORDS · PRIVATE COLLECTIONS
+        HISTORICAL AUCTION RECORDS · PRIVATE COLLECTIONS
     </div>
 
 </footer>
@@ -245,27 +602,389 @@
 
 <script>
 
-function searchArchive() {
+const objects = {
 
-    const year = document
-        .getElementById("yearInput")
+    "1": {
+        name: "Bohemian Glass Decanter",
+        year: "1976",
+        category: "Decorative Arts",
+        auction: "Spring Decorative Arts Register",
+        folio: "014"
+    },
+
+    "2": {
+        name: "Walnut Writing Desk",
+        year: "1977",
+        category: "Furniture",
+        auction: "Winter Private Holdings",
+        folio: "021"
+    },
+
+    "3": {
+        name: "Silver Candlestick Pair",
+        year: "1978",
+        category: "Silverware",
+        auction: "Spring Household Collection",
+        folio: "033"
+    },
+
+    "4": {
+        name: "Porcelain Tea Service",
+        year: "1979",
+        category: "Ceramics",
+        auction: "Spring Decorative Arts Auction",
+        folio: "041"
+    },
+
+    "5": {
+        name: "Bronze Mantel Clock",
+        year: "1979",
+        category: "Horology",
+        auction: "Spring Decorative Arts Auction",
+        folio: "047"
+    },
+
+    "6": {
+        name: "Art Nouveau Vase",
+        year: "1980",
+        category: "Decorative Arts",
+        auction: "Annual Decorative Register",
+        folio: "052"
+    },
+
+    "7": {
+        name: "Miniature Landscape Painting",
+        year: "1981",
+        category: "Fine Art",
+        auction: "Private Art Holdings",
+        folio: "061"
+    },
+
+    "8": {
+        name: "Enamelled Cigarette Case",
+        year: "1982",
+        category: "Personal Objects",
+        auction: "Autumn Private Collection",
+        folio: "074"
+    },
+
+    "9": {
+        name: "Carved Oak Mirror",
+        year: "1983",
+        category: "Furniture",
+        auction: "Estate Decorative Collection",
+        folio: "081"
+    },
+
+    "10": {
+        name: "Gold Pendant",
+        year: "1984",
+        category: "Jewellery",
+        auction: "Private Estates Collection",
+        folio: "052"
+    },
+
+    "11": {
+        name: "Sapphire Dress Ring",
+        year: "1984",
+        category: "Jewellery",
+        auction: "Private Estates Collection",
+        folio: "055"
+    },
+
+    "12": {
+        name: "Silver Presentation Case",
+        year: "1984",
+        category: "Personal Objects",
+        auction: "Private Estates Collection",
+        folio: "066"
+    },
+
+    "13": {
+        name: "Bohemian Crystal Bowl",
+        year: "1985",
+        category: "Decorative Arts",
+        auction: "Spring Decorative Collection",
+        folio: "072"
+    },
+
+    "14": {
+        name: "Ivory Miniature Frame",
+        year: "1985",
+        category: "Decorative Arts",
+        auction: "Spring Decorative Collection",
+        folio: "078"
+    },
+
+    "15": {
+        name: "Travelling Writing Set",
+        year: "1986",
+        category: "Personal Objects",
+        auction: "Private Travelling Collection",
+        folio: "084"
+    },
+
+    "16": {
+        name: "Bronze Horse Figure",
+        year: "1986",
+        category: "Sculpture",
+        auction: "European Sculpture Register",
+        folio: "091"
+    },
+
+    "17": {
+        name: "Garnet Brooch",
+        year: "1987",
+        category: "Jewellery",
+        auction: "Autumn Jewellery Collection",
+        folio: "097"
+    },
+
+    "18": {
+        name: "Mahogany Jewellery Box",
+        year: "1987",
+        category: "Furniture",
+        auction: "Autumn Private Holdings",
+        folio: "103"
+    },
+
+    "19": {
+        name: "Silver Cigarette Case",
+        year: "1988",
+        category: "Personal Objects",
+        auction: "Autumn Auction · Prague",
+        folio: "068"
+    },
+
+    "20": {
+        name: "Garnet Pendant",
+        year: "1988",
+        category: "Jewellery",
+        auction: "Autumn Auction · Prague",
+        folio: "070"
+    },
+
+    "21": {
+        name: "Bohemian Glass Bowl",
+        year: "1988",
+        category: "Decorative Arts",
+        auction: "Autumn Auction · Prague",
+        folio: "071"
+    },
+
+    "22": {
+        name: "Gold Dress Pin",
+        year: "1988",
+        category: "Jewellery",
+        auction: "Autumn Auction · Prague",
+        folio: "072"
+    },
+
+    "23": {
+        name: "Unidentified Crystal Jewel",
+        year: "1988",
+        category: "Jewellery",
+        auction: "Autumn Auction · Prague",
+        folio: "073"
+    },
+
+    "24": {
+        name: "Silver Pocket Watch",
+        year: "1988",
+        category: "Horology",
+        auction: "Autumn Auction · Prague",
+        folio: "074"
+    },
+
+    "25": {
+        name: "Enamelled Brooch",
+        year: "1988",
+        category: "Jewellery",
+        auction: "Autumn Auction · Prague",
+        folio: "076"
+    },
+
+    "26": {
+        name: "Carved Ivory Box",
+        year: "1988",
+        category: "Decorative Arts",
+        auction: "Autumn Auction · Prague",
+        folio: "078"
+    },
+
+    "27": {
+        name: "Art Deco Desk Clock",
+        year: "1989",
+        category: "Horology",
+        auction: "Spring Private Collection",
+        folio: "084"
+    },
+
+    "28": {
+        name: "Silver Vanity Mirror",
+        year: "1989",
+        category: "Personal Objects",
+        auction: "Spring Private Collection",
+        folio: "091"
+    },
+
+    "29": {
+        name: "Czech Landscape Painting",
+        year: "1990",
+        category: "Fine Art",
+        auction: "European Art Register",
+        folio: "097"
+    },
+
+    "30": {
+        name: "Oak Writing Cabinet",
+        year: "1990",
+        category: "Furniture",
+        auction: "European Estates Collection",
+        folio: "104"
+    },
+
+    "31": {
+        name: "Porcelain Figurine",
+        year: "1991",
+        category: "Ceramics",
+        auction: "Winter Antiquities Register",
+        folio: "112"
+    },
+
+    "32": {
+        name: "Silver Serving Tray",
+        year: "1991",
+        category: "Silverware",
+        auction: "Winter Antiquities Register",
+        folio: "118"
+    },
+
+    "33": {
+        name: "Mahogany Cabinet",
+        year: "1992",
+        category: "Furniture",
+        auction: "Winter Antiquities Register",
+        folio: "081"
+    },
+
+    "34": {
+        name: "Bronze Horse Figure",
+        year: "1992",
+        category: "Sculpture",
+        auction: "Winter Antiquities Register",
+        folio: "087"
+    },
+
+    "35": {
+        name: "Czech Landscape Study",
+        year: "1992",
+        category: "Fine Art",
+        auction: "Winter Antiquities Register",
+        folio: "090"
+    },
+
+    "36": {
+        name: "Porcelain Floral Vase",
+        year: "1992",
+        category: "Ceramics",
+        auction: "Winter Antiquities Register",
+        folio: "093"
+    },
+
+    "37": {
+        name: "Silver Presentation Tray",
+        year: "1992",
+        category: "Silverware",
+        auction: "Winter Antiquities Register",
+        folio: "096"
+    },
+
+    "38": {
+        name: "Art Nouveau Desk Lamp",
+        year: "1993",
+        category: "Decorative Arts",
+        auction: "Spring Decorative Collection",
+        folio: "104"
+    },
+
+    "39": {
+        name: "Gold Locket",
+        year: "1994",
+        category: "Jewellery",
+        auction: "Private Jewellery Register",
+        folio: "117"
+    },
+
+    "40": {
+        name: "Carved Walnut Writing Box",
+        year: "1995",
+        category: "Furniture",
+        auction: "Private Estates Collection",
+        folio: "124"
+    }
+
+};
+
+
+function showObject(id) {
+
+    const object = objects[id];
+
+    document.getElementById("panelName").textContent =
+        object.name;
+
+    document.getElementById("panelYear").textContent =
+        object.year;
+
+    document.getElementById("panelCategory").textContent =
+        object.category;
+
+    document.getElementById("panelAuction").textContent =
+        object.auction;
+
+    document.getElementById("panelFolio").textContent =
+        object.folio;
+
+    document.getElementById("objectPanel").classList.add("visible");
+
+    document.getElementById("objectPanel")
+        .scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+}
+
+
+function closeObject() {
+
+    document
+        .getElementById("objectPanel")
+        .classList.remove("visible");
+
+}
+
+
+function searchReference() {
+
+    const input = document
+        .getElementById("referenceInput")
         .value
-        .trim();
+        .trim()
+        .toUpperCase();
 
-    const message = document.getElementById("searchMessage");
+    const message =
+        document.getElementById("referenceMessage");
 
-    if (year === "1988") {
+    if (input === "PAR-1988-073") {
 
-        window.location.href = "catalogue-1988.html";
-
-    } else if (year === "") {
-
-        message.textContent = "Please enter a year.";
+        window.location.href =
+            "record-1988.html";
 
     } else {
 
         message.textContent =
-            "No catalogue is currently available for this year.";
+            "No public record was found for this reference.";
 
     }
 
